@@ -78,22 +78,3 @@ class ChatRoom {
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        ChatRoom chatRoom = new ChatRoom("General");
-
-        User user1 = new User("Amaya");
-        User user2 = new User("Amila");
-
-        user1.joinChatRoom(chatRoom);
-        user2.joinChatRoom(chatRoom);
-
-        user1.sendMessage("Hello, Amila!");
-        user2.sendMessage("Hi, Amaya!");
-
-        List<Message> chatMessages = chatRoom.getMessages();
-        for (Message message : chatMessages) {
-            System.out.println(message.getSender().getUsername() + ": " + message.getContent());
-        }
-    }
-}
