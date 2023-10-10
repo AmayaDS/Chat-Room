@@ -90,6 +90,12 @@ public class Main {
         user1.sendMessage("Hello, Amila!");
         user2.sendMessage("Hi, Amaya!");
 
+        List<Message> chatMessages = chatRoom.getMessages();
+        for (Message message : chatMessages) {
+            System.out.println(message.getSender().getUsername() + ": " + message.getContent());
+        }
+    }
+}
         
         
 
